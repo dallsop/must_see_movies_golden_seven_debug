@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h1>Director #<%= @director.id %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Dob</dt>
+  <% if !@director.dob.nil? %>
+      <dd><%= @director.dob %></dd>
+  <% else %>
+      <dd>&NonBreakingSpace;</dd>
+  <% end %>
+
+  <dt>Name</dt>
+  <% if !@director.name.nil? %>
+      <dd><%= @director.name %></dd>
+  <% else %>
+      <dd>&NonBreakingSpace;</dd>
+  <% end %>
+
+  <dt>Bio</dt>
+  <% if !@director.bio.nil? %>
+      <dd><%= @director.bio %></dd>
+  <% else %>
+      <dd>&NonBreakingSpace;</dd>
+  <% end %>
+
+  <dt>Image</dt>
+  <dd><img src="<%= @director.image_url %>" width="320"></dd>
+
+</dl>

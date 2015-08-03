@@ -4,19 +4,39 @@
 
 <dl class="dl-horizontal">
   <dt>Title</dt>
-  <dd><%= @movie.title %></dd>
+  <% if !@movie.title.nil? %>
+      <dd><%= @movie.title %></dd>
+  <% else %>
+      <dd>&NonBreakingSpace;</dd>
+  <% end %>
 
   <dt>Year</dt>
-  <dd><%= @movie.year %></dd>
+  <% if !@movie.year.nil? %>
+      <dd><%= @movie.year %></dd>
+  <% else %>
+      <dd>&NonBreakingSpace;</dd>
+  <% end %>
 
   <dt>Duration</dt>
-  <dd><%= @movie.duration %></dd>
+  <% if !@movie.duration.nil? %>
+      <dd><%= @movie.duration %></dd>
+  <% else %>
+      <dd>&NonBreakingSpace;</dd>
+  <% end %>
 
   <dt>Description</dt>
-  <dd><%= @movie.description %></dd>
+  <% if !@movie.description.nil? %>
+      <dd><%= @movie.description %></dd>
+  <% else %>
+      <dd>&NonBreakingSpace;</dd>
+  <% end %>
 
   <dt>Director ID</dt>
-  <dd><%= @movie.director_id %></dd>
+  <% if !@movie.director_id.nil? %>
+      <dd><%= @movie.director_id %></dd>
+  <% else %>
+      <dd>&NonBreakingSpace;</dd>
+  <% end %>
 
   <dt>Image</dt>
   <dd><img src="<%= @movie.image_url %>" width="320"></dd>
